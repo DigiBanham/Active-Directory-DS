@@ -77,11 +77,8 @@ Configured Windows Server Core using PowerShell to gain experience administering
 Tasks performed:
 
 - Configured initial server settings.
-
 - Assigned static IP addressing.
-
 - Configured DNS settings.
-
 - Used PowerShell to perform server administration tasks.
 
 ### 3. Active Directory Domain Services Deployment
@@ -91,97 +88,68 @@ Installed and configured Active Directory Domain Services to establish the Windo
 Tasks performed:
 
 - Installed AD DS.
-
 - Configured Active Directory using a PowerShell script.
-
 - Promoted the server to a domain controller.
-
 - Configured the domain environment.
-
 - Used Active Directory Users and Computers to manage directory objects.
 
-4. Domain User & Organizational Unit Management
+### 4. Domain User & Organizational Unit Management
 
 Practiced common Active Directory account and directory management operations.
 
 Tasks performed:
 
 - Created and managed domain user accounts.
-
 - Created Organizational Units (OUs).
-
 - Created security groups.
-
 - Organized directory objects within OUs.
-
 - Added users to security groups.
-
 - Removed users from groups and deleted user accounts when appropriate.
-
 - Practiced account lifecycle management.
 
-5. Password Policy Management
+### 5. Password Policy Management
 
 Configured Fine-Grained Password Policies to explore more granular password policy administration in Active Directory.
 
 Tasks performed:
 
 - Created Password Settings Objects (PSOs).
-
 - Configured password policy settings.
-
 - Applied password policies to appropriate users or security groups.
-
 - Practiced managing and verifying policy application.
 
-6. Client Domain Integration
+### 6. Client Domain Integration
 
 Configured a Windows client machine to participate in the domain environment.
 
 Tasks performed:
 
-Configured the Windows client to use the domain controller for DNS.
+- Configured the Windows client to use the domain controller for DNS.
+- Joined the Windows 11 client to the Active Directory domain.
+- Practiced working with domain user accounts.
+- Verified domain connectivity and membership.
 
-Joined the Windows 11 client to the Active Directory domain.
-
-Practiced working with domain user accounts.
-
-Verified domain connectivity and membership.
-
-Skills Demonstrated
+## Skills Demonstrated
 
 This project provided practical experience with:
 
-Windows Server administration
+- Windows Server administration
+ - Windows Server Core administration
+ - Active Directory Domain Services
+ - Domain controller configuration
+ - DNS configuration
+ - Static IP addressing
+ - PowerShell administration and scripting
+ - User and group lifecycle management
+ - Organizational Unit administration
+ - Security group management
+ - Fine-Grained Password Policies
+ - Windows domain integration
+ - Virtual machine deployment and management
+ - Technical documentation
+ - Repository Structure
 
-Windows Server Core administration
-
-Active Directory Domain Services
-
-Domain controller configuration
-
-DNS configuration
-
-Static IP addressing
-
-PowerShell administration and scripting
-
-User and group lifecycle management
-
-Organizational Unit administration
-
-Security group management
-
-Fine-Grained Password Policies
-
-Windows domain integration
-
-Virtual machine deployment and management
-
-Technical documentation
-
-Repository Structure
-
+```text 
 Active-Directory-Homelab/
 │
 ├── README.md
@@ -204,28 +172,21 @@ Active-Directory-Homelab/
     ├── Active-Directory/
     ├── User-and-Group-Management/
     └── Password-Policies/
-
+``` 
 The structure above is the intended organization. Files and folders will be added as the documentation and scripts are published.
 
-Future Improvements
+## Future Improvements
 
 Potential expansions to this lab include:
+- Automating bulk user creation with PowerShell.
+- Implementing Group Policy Objects (GPOs).
+- Configuring shared folders and NTFS permissions.
+- Exploring Active Directory replication and additional domain controllers.
+- Implementing additional Windows Server - infrastructure services.
+- Integrating Microsoft Entra ID and exploring - hybrid identity.
+- Expanding into Microsoft Azure infrastructure.
 
-Automating bulk user creation with PowerShell.
-
-Implementing Group Policy Objects (GPOs).
-
-Configuring shared folders and NTFS permissions.
-
-Exploring Active Directory replication and additional domain controllers.
-
-Implementing additional Windows Server infrastructure services.
-
-Integrating Microsoft Entra ID and exploring hybrid identity.
-
-Expanding into Microsoft Azure infrastructure.
-
-Key Takeaways
+## Key Takeaways
 
 This lab provided an opportunity to move beyond theoretical knowledge and practice administering a Windows domain environment.
 
