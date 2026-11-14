@@ -156,22 +156,31 @@ Active-Directory-Homelab/
 │
 ├── Documentation/
 │   ├── Environment-Setup.md
-│   ├── Server-Configuration.md
-│   ├── Active-Directory-Deployment.md
-│   ├── User-and-Group-Management.md
-│   └── Password-Policies.md
+│   │
+│   ├── Desktop-Experience/
+│   │   ├── Server-Configuration.md
+│   │   ├── Active-Directory-Deployment.md
+│   │   ├── User-and-Group-Management.md
+│   │   └── Password-Policies.md
+│   │
+│   └── Server-Core/
+│       ├── Server-Configuration.md
+│       ├── Active-Directory-Deployment.md
+│       └── PowerShell-Administration.md
 │
 ├── PowerShell/
-│   ├── Configure-ServerCore.ps1
-│   ├── Deploy-ActiveDirectory.ps1
-│   ├── Create-Users.ps1
-│   └── Create-Groups.ps1
+│   ├── Desktop-Experience/
+│   └── Server-Core/
 │
 └── Screenshots/
-    ├── Server-Configuration/
-    ├── Active-Directory/
-    ├── User-and-Group-Management/
-    └── Password-Policies/
+    ├── Desktop-Experience/
+    │   ├── Server-Configuration/
+    │   ├── Active-Directory/
+    │   └── User-and-Group-Management/
+    │
+    └── Server-Core/
+        ├── Server-Configuration/
+        └── Active-Directory/
 ``` 
 The structure above is the intended organization. Files and folders will be added as the documentation and scripts are published.
 
