@@ -2,6 +2,31 @@
 
 A hands-on Windows Server and Active Directory lab built to develop practical systems administration skills, explore enterprise identity management, and gain experience configuring and managing a Windows domain environment.
 
+<details>
+<summary><strong><big>Table of Contents</big></strong></summary>
+
+1. [Project Overview](#project-overview)
+2. [Objectives](#objectives)
+3. [Lab Environment](#lab-environment)
+4. [Technologies & Tools](#technologies--tools)
+5. [Implementation](#implementation)
+   - [1. Virtual Machine Deployment & Network Configuration](#1-virtual-machine-deployment--network-configuration)
+   - [2. Windows Server Core Configuration](#2-windows-server-core-configuration)
+   - [3. Active Directory Domain Services Deployment](#3-active-directory-domain-services-deployment)
+   - [4. Domain User & Organizational Unit Management](#4-domain-user--organizational-unit-management)
+   - [5. Password Policy Management](#5-password-policy-management)
+   - [6. Client Domain Integration](#6-client-domain-integration)
+6. [Skills Demonstrated](#skills-demonstrated)
+7. [Repository Structure](#repository-structure)
+8. [Future Improvements](#future-improvements)
+9. [Key Takeaways](#key-takeaways)
+
+</details>
+
+### Project Documentation
+
+- [Environment Setup](Documentation/Environment-Setup.md)
+
 ## Project Overview
 
 This project documents the deployment and administration of a virtualized Windows Server environment using Oracle VirtualBox.
