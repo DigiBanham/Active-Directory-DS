@@ -23,11 +23,12 @@ The lab consists of two virtual machines:
 - **DC1:** Windows Server 2025, designated to function as the domain controller and host the infrastructure services required for the lab.
 - **CLIENT1:** Windows 11 Enterprise Evaluation, designated as the client workstation that will eventually join the Active Directory domain.
 
+
 ## 2. Network Topology
 
 The lab environment follows the network topology illustrated below, including the network adapters, virtual network connections, and IP addresses planned for each machine.
 
-![Active Directory Homelab Network Topology](../Screenshots/Environment-Setup/Network-Topology.png)
+![Active Directory Homelab Network Topology](../Screenshots/Environment-Setup/01-Network-Topology.png)
 
 The domain controller will use two network adapters:
 
@@ -46,6 +47,8 @@ Windows 11 Enterprise Evaluation was selected for the client workstation to supp
 
 I also reviewed the system requirements for Windows Server 2025 and Windows 11, available on [learn.microsoft.com](https://learn.microsoft.com/en-us/), and allocated virtual hardware resources accordingly when creating the virtual machines in Oracle VirtualBox.
 
+***Virtual Box version: 7.2.22 r175245***
+
 ### 3.1 Domain Controller — DC1
 
 | Configuration | Allocation |
@@ -59,7 +62,7 @@ I also reviewed the system requirements for Windows Server 2025 and Windows 11, 
 | Network Adapter 2 | Internal Network |
 | Virtual Disk | 50 GB |
 
-![Windows Server 2025 Virtual Machine Configuration](../Screenshots/Environment-Setup/Server-VM-Configuration.png)
+![Windows Server 2025 Virtual Machine Configuration](../Screenshots/Environment-Setup/02-Server-VM-Configuration.png)
 
 ### 3.2 Client Workstation — CLIENT1
 
@@ -73,7 +76,7 @@ I also reviewed the system requirements for Windows Server 2025 and Windows 11, 
 | Network Adapter 1 | Internal Network |
 | Virtual Disk | 80 GB |
 
-![Windows 11 Client Virtual Machine Configuration](../Screenshots/Environment-Setup/Client-VM-Configuration.png)
+![Windows 11 Client Virtual Machine Configuration](../Screenshots/Environment-Setup/03-Client-VM-Configuration.png)
 
 ## 4. Operating System Installation
 
@@ -88,11 +91,36 @@ Following installation, I verified the operating system versions to confirm that
 
 **DC1 — Windows Server 2025**
 
-![Windows Server 2025 System Information](../Screenshots/Environment-Setup/Server-OS-Verification.png)
+![Windows Server 2025 System Information](../Screenshots/Environment-Setup/04-Server-OS-Verification.png)
 
 **CLIENT1 — Windows 11 Enterprise Evaluation**
 
-![Windows 11 System Information](../Screenshots/Environment-Setup/Client-OS-Verification.png)
+![Windows 11 System Information](../Screenshots/Environment-Setup/05-Client-OS-Verification.png)
+
+### Checking for Updates
+
+Following the clean installation of Windows Server 2025, I checked for available Windows updates before proceeding with the server configuration.
+
+With internet connectivity available through the VirtualBox NAT adapter, I accessed the Windows Update menu and installed the available updates. Keeping the operating system up to date helps address known security vulnerabilities, improve system reliability, and maintain a supported software baseline.
+
+**Steps performed:**
+
+1. Open **Settings**.
+2. Navigate to **Windows Update**.
+3. Select **Check for updates**.
+4. Review and install the available updates.
+5. Restart the server if required.
+6. Check for additional updates after restarting.
+
+![Windows Update Installation](../Screenshots/Environment-Setup/06-Checking-For-Updates.png)
+
+**Enterprise Environment Considerations**
+
+In an enterprise environment, Windows updates are generally managed through an IT-controlled patch management process. Although updates can be installed automatically, IT administrators establish policies to control deployment schedules, testing, installation deadlines, and restart behavior.
+
+Updates may initially be deployed to a smaller group of test machines before being distributed to the broader environment. IT also monitors update compliance and investigates systems that fail to install required updates.
+
+This approach helps organizations maintain system security and consistency while minimizing potential disruptions to business operations.
 
 ## 5. Initial Network Verification
 
@@ -113,7 +141,7 @@ I used the `ipconfig /all` command on the client workstation to inspect its init
 
 The results returned an Automatic Private IP Addressing (APIPA) address in the `169.254.x.x` range.
 
-![CLIENT1 Initial IP Configuration](../Screenshots/Environment-Setup/Client-Initial-IP-Configuration.png)
+![CLIENT1 Initial IP Configuration](../Screenshots/Environment-Setup/07-Client-Initial-IP-Configuration.png)
 
 This behavior was expected because the Internal Network did not yet have a DHCP server configured to assign IPv4 addresses to client devices.
 
